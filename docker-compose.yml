@@ -1,0 +1,17 @@
+version: '3'
+services:
+
+    web:
+      build: .
+      command: python run.py
+      restart: always
+      volumes:
+        - ./:/app
+        # (HOST:CONTAINER)
+      ports:
+        - "5000:5000"
+        # (HOST:CONTAINER)
+
+# volumes:
+    # api_data:
+    # pgdata:
